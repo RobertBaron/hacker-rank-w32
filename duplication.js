@@ -21,12 +21,12 @@ const buildS = (s) => {
   return buildS(sExpanded);
 };
 
-const duplication = (value) => {
-  return s[value];
+const duplication = (value, binaryData) => {
+  return binaryData[value];
 };
 
 const s = buildS();
 
-assert.equal(duplication(2), 1);
-assert.equal(duplication(5), 0);
-assert.equal(duplication(7), 1);
+assert.equal(duplication(2, s), 1);
+assert.equal(duplication(5, s), 0);
+assert.equal(duplication(7, s), 1);
