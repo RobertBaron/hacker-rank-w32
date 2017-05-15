@@ -2,7 +2,7 @@ const assert = require('assert');
 
 const getT = (s) => {
   return s.map(function(binary){
-    return binary ? 0 : 1;
+    return +!binary;
   });
 };
 
